@@ -1,0 +1,39 @@
+server:
+    port: 8081
+    address: 0.0.0.0
+    
+spring:
+
+   datasource:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        test-on-borrow: true
+        test-while-idle: true
+        validation-query: SELECT 1
+        validation-query-timeout: 30
+        time-between-eviction-runs-millis: 300000
+        url: jdbc:postgresql://localhost:5432/url-shortener
+        databaseName: url-shortener
+        serverName:
+        username: postgres
+        password: 1234
+
+   jpa:
+           database-platform: org.hibernate.dialect.PostgreSQLDialect
+           database: POSTGRESQL
+           openInView: false
+           show_sql: false
+           generate-ddl: false
+           hibernate:
+               ddl-auto: none
+               naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+           properties:
+               hibernate.cache.use_second_level_cache: false
+               hibernate.cache.use_query_cache: false
+               hibernate.generate_statistics: false
+               hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+
+liquibase:
+    change-log: classpath:config/liquibase/db-changelog.xml
+domain:
+    shortener: https://abidivi1991.wixsite.com/divyaaelango/projects
+

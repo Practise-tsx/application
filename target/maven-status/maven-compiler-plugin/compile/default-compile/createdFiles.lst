@@ -1,0 +1,10 @@
+com\urlapp\app\api\URLResource.class
+com\urlapp\app\api\URLResourceImlp.class
+com\urlapp\app\service\URLServiceImpl.class
+com\urlapp\app\Application.class
+com\urlapp\app\api\dto\URLShortenerDTO.class
+com\urlapp\app\service\URLService.class
+com\urlapp\app\utils\Base62.class
+com\urlapp\app\logic\URLShortener.class
+com\urlapp\app\repo\URLRepository.class
+com\urlapp\app\utils\DomainConstants.class
